@@ -1,0 +1,13 @@
+gluttons:
+  build: .
+  ports:
+    - "3000:3000"
+  volumes_from:
+    - gluttons_data
+
+gluttons_data:
+  image: busybox
+  volumes:
+      - /usr/src/app/scratch
+  command: "echo"
+
